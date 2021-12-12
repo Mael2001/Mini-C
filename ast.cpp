@@ -1215,9 +1215,9 @@ void PlusAssignExpr::genCode(Code &code){
     ss<< leftSideCode.code <<endl;
     ss<< rightSideCode.code <<endl;
     if(leftSideCode.type == INT)
-            ss << "add "<< leftSideCode.place<<", "<< leftSideCode.place <<", "<< rightSideCode.place;
+            ss << "add "<< leftSideCode.place<<", "<< leftSideCode.place <<", "<< rightSideCode.place<<endl;
     else if(leftSideCode.type == FLOAT)
-            ss << "add.s "<< leftSideCode.place<<", "<< leftSideCode.place <<", "<< rightSideCode.place;
+            ss << "add.s "<< leftSideCode.place<<", "<< leftSideCode.place <<", "<< rightSideCode.place<<endl;
     string name = ((IdExpr *)this->expr1)->id;
     if(codeGenerationVars.find(name) == codeGenerationVars.end()){
         if(leftSideCode.type == INT)
@@ -1243,9 +1243,9 @@ void MinusAssignExpr::genCode(Code &code){
     ss<< leftSideCode.code <<endl;
     ss<< rightSideCode.code <<endl;
     if(leftSideCode.type == INT)
-            ss << "sub "<< leftSideCode.place<<", "<< leftSideCode.place <<", "<< rightSideCode.place;
+            ss << "sub "<< leftSideCode.place<<", "<< leftSideCode.place <<", "<< rightSideCode.place<<endl;
     else if(leftSideCode.type == FLOAT)
-            ss << "sub.s "<< leftSideCode.place<<", "<< leftSideCode.place <<", "<< rightSideCode.place;
+            ss << "sub.s "<< leftSideCode.place<<", "<< leftSideCode.place <<", "<< rightSideCode.place<<endl;
     string name = ((IdExpr *)this->expr1)->id;
     if(codeGenerationVars.find(name) == codeGenerationVars.end()){
         if(leftSideCode.type == INT)
