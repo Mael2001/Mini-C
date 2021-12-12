@@ -89,12 +89,16 @@ start: input{
     assemblyFile.text = ".text\n";
     list<Statement *>::iterator it = $1->begin();
     string code;
+    code += "main:\n";
     while(it != $1->end()){
         printf("semantic result: %d \n",(*it)->evaluateSemantic());
         code += (*it)->genCode();
         it++;
     }
+    code += "li $v0, 10\n";
+    code += "syscall";
     assemblyFile.text += code;
+
     writeFile("result.s");
 }
 

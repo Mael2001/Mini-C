@@ -1,25 +1,8 @@
 void main(){
     int x = 0;
     x += 2;
+    ++x;
+    --x;
 
-    if(x>1){
-        printf("\nMayor que 1");
-    }
-    if(x<2){
-        printf("\nMenor que 2");
-    }
-    if(x <= 2){
-        printf("\nMenor igual que 2");
-    }
-    if(x >= 2){
-        printf("\nMayor igual que 2");
-    }
-    if(x==2){
-        printf("\nIgual que 2");
-    }
-
-    x -= 2;
-    if(x!=2){
-        printf("\nDistinto que 2");
-    }
+    printf(x);
 }
